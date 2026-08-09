@@ -65,6 +65,19 @@ Copy `.env.example` to `.env` to keep your environment variables organized local
 cp .env.example .env
 ```
 
+### 🖼️ Adding Custom Photos
+
+For privacy, personal photos are excluded from public Git tracking by default. To display your own custom photos on the scrapbook polaroid cards, drop your images into `assets/photos/` with the following expected file names:
+
+| Polaroid Card | Expected File Path | Description |
+| :--- | :--- | :--- |
+| **Polaroid 1** (`.ph1`) | `assets/photos/p1.jpeg` | First memory photo |
+| **Polaroid 2** (`.ph2`) | `assets/photos/p2.png` | Second memory photo |
+| **Polaroid 3** (`.ph3`) | `assets/photos/ph3.jpeg` | Third memory photo |
+| **Polaroid 4** (`.ph4`) | `assets/photos/ph4.png` | Fourth memory photo |
+
+> 💡 **Tip:** You can also change the photo file paths or formats (`.jpg`, `.webp`) by editing `.ph1`, `.ph2`, `.ph3`, and `.ph4` classes in `css/style.css`.
+
 ---
 
 ## 📁 Project Structure
