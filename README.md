@@ -78,6 +78,28 @@ For privacy, personal photos are excluded from public Git tracking by default. T
 
 > 💡 **Tip:** You can also change the photo file paths or formats (`.jpg`, `.webp`) by editing `.ph1`, `.ph2`, `.ph3`, and `.ph4` classes in `css/style.css`.
 
+### 🎵 Customizing Audio / Background Song
+
+Place your `.mp3` audio track in `assets/audio/` and reference it in `index.html` (around line 520):
+
+```html
+<audio id="bg-music" loop>
+  <source src="assets/audio/JVKE - golden hour (instrumental).mp3" type="audio/mpeg">
+</audio>
+```
+
+### 🎨 Color Theme Customization
+
+You can change the color scheme at the top of `css/style.css` in the `:root` block:
+
+```css
+:root {
+  --pink: #ffb7c5;
+  --gold: #d4af37;
+  --rose: #e63946;
+}
+```
+
 ---
 
 ## 📁 Project Structure
