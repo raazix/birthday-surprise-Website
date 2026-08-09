@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A surprise is waiting for you 🌸</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- SCRAPBOOK CORNER DECORATIONS & STICKERS -->
+<div class="scrapbook-decorations">
+  <!-- Wavy hand-drawn line borders framing the viewport -->
+  <div class="wavy-frame-left"></div>
+  <div class="wavy-frame-right"></div>
+
+  <!-- Hanging bunting banners -->
+  <div class="bunting-banner left-bunting">
+    <div class="bunting-flag red">★</div>
+    <div class="bunting-flag gold">🌸</div>
+    <div class="bunting-flag red">★</div>
+    <div class="bunting-flag gold">🌸</div>
+  </div>
+  <div class="bunting-banner right-bunting">
+    <div class="bunting-flag gold">🌸</div>
+    <div class="bunting-flag red">★</div>
+    <div class="bunting-flag gold">🌸</div>
+    <div class="bunting-flag red">★</div>
+  </div>
+
+  <!-- Corner Stickers -->
+  <div class="corner-sticker star-top-left">★</div>
+  <div class="corner-sticker camera-bottom-left">📷</div>
+  <div class="corner-sticker glass-top-right">🍹</div>
+  <div class="corner-sticker discoball-bottom-right">
+    <div class="disco-grid"></div>
+    <div class="disco-shine"></div>
+  </div>
+  <div class="corner-sticker star-bottom-right">★</div>
+  <div class="corner-sticker star2-bottom-right">★</div>
+</div>
+
+<div id="bg-flowers"></div>
+
+<!-- SCREEN 1: LOCK -->
+<section class="screen active" id="screen-lock">
+  <div class="scrapbook-page">
+    <div class="scrapbook-header">
+      <span class="stamp-text">top secret</span>
+      <span class="retro-star">★</span>
+    </div>
+    
+    <div class="mascot">🔒⭐💌</div>
+    <h1 class="glow-text typewriter">A surprise is waiting...</h1>
+    <p class="hint typewriter">Guess the date we never forget <span class="hint-tag">(DDMM)</span></p>
+    
+    <div class="pin-dots">
+      <span class="dot" data-i="0"></span>
+      <span class="dot" data-i="1"></span>
+      <span class="dot" data-i="2"></span>
+      <span class="dot" data-i="3"></span>
+    </div>
+    
+    <div class="numpad" id="numpad">
+      <button data-num="1">1</button>
+      <button data-num="2">2</button>
+      <button data-num="3">3</button>
+      <button data-num="4">4</button>
+      <button data-num="5">5</button>
+      <button data-num="6">6</button>
+      <button data-num="7">7</button>
+      <button data-num="8">8</button>
+      <button data-num="9">9</button>
+      <button class="ghost" disabled></button>
+      <button data-num="0">0</button>
+      <button id="backspace">⌫</button>
+    </div>
+    <p class="error-msg typewriter" id="error-msg">Not quite... try again 💭</p>
+  </div>
+</section>
+
+<!-- SCREEN 2: REVEAL -->
+<section class="screen" id="screen-reveal">
+  <div class="scrapbook-page">
+    <div class="scrapbook-header">
+      <span class="stamp-text">opened 💌</span>
+      <span class="retro-star">★</span>
+    </div>
+    
+    <p class="eyebrow typewriter">✦ special birthday edition ✦</p>
+    
+    <!-- Cutout letters collage -->
+    <div class="collage-container">
+      <div class="collage-word">
+        <span class="cutout-letter char-h">H</span>
+        <span class="cutout-letter char-a">A</span>
+        <span class="cutout-letter char-p">P</span>
+        <span class="cutout-letter char-p">P</span>
+        <span class="cutout-letter char-y">Y</span>
+      </div>
+      <div class="collage-word">
+        <span class="cutout-letter char-b">B</span>
+        <span class="cutout-letter char-i">I</span>
+        <span class="cutout-letter char-r">R</span>
+        <span class="cutout-letter char-t">T</span>
+        <span class="cutout-letter char-h">H</span>
+        <span class="cutout-letter char-d">D</span>
+        <span class="cutout-letter char-a">A</span>
+        <span class="cutout-letter char-y">Y</span>
+      </div>
+    </div>
+    
+    <p class="the-big-tag typewriter">THE BIG</p>
+    <div class="big-age-badge" id="age-fill">20</div>
+    
+    <p class="sub typewriter">Today is all about celebrating you, <span id="name-fill" class="highlight-name">Fahimm</span>! 🌸</p>
+    <button class="btn-continue" data-next="screen-music">Continue →</button>
+  </div>
+</section>
+
+<!-- SCREEN 3: VINYL & FLORK MUSIC SCREEN -->
+<section class="screen" id="screen-music">
+  <div class="scrapbook-page letter-scrapbook">
+    <div class="scrapbook-header">
+      <span class="stamp-text">happy birthday</span>
+      <span class="retro-star">★</span>
+    </div>
+    
+    <div class="scrapbook-row">
+      <!-- Left side: Vinyl record & Spotify widget -->
+      <div class="scrapbook-item-card vinyl-card">
+        <div class="vinyl-record-container">
+          <div class="vinyl-record" id="vinyl-record">
+            <div class="vinyl-groove"></div>
+            <div class="vinyl-label">
+              <span class="vinyl-heart">🌸</span>
+            </div>
+          </div>
+          <div class="tonearm" id="tonearm"></div>
+        </div>
+        
+        <p class="vinyl-quote typewriter">
+          AND SUDDENLY,<br>EVERY DAY IS<br>SO MUCH BETTER WITH<br><span class="highlight-you">you ★</span>
+        </p>
+        
+        <!-- Custom Spotify-style Widget -->
+        <div class="spotify-widget">
+          <div class="spotify-cover">
+            <div class="spotify-cover-svg">🎙️</div>
+          </div>
+          <div class="spotify-details">
+            <div class="spotify-title typewriter">special track 🌸</div>
+            <div class="spotify-artist typewriter">for madamm ji</div>
+          </div>
+          <button class="spotify-play-btn" id="spotify-play-btn">▶</button>
+        </div>
+      </div>
+      
+      <!-- Right side: Cute Flork sticker card with Interactive Secret Note -->
+      <div class="scrapbook-item-card flork-card">
+        <div class="flork-sketch">
+          <!-- Inline Hand-drawn Style Flork SVG -->
+          <svg viewBox="0 0 100 90" class="flork-svg">
+            <path d="M35 85 C35 30, 65 30, 65 85" fill="#ffffff" stroke="#a3001e" stroke-width="3" stroke-linecap="round"/>
+            <path d="M40 55 L15 55" fill="none" stroke="#a3001e" stroke-width="3" stroke-linecap="round"/>
+            <path d="M60 55 L85 55" fill="none" stroke="#a3001e" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="46" cy="46" r="2.5" fill="#a3001e"/>
+            <circle cx="54" cy="46" r="2.5" fill="#a3001e"/>
+            <path d="M48 51 Q50 53, 52 51" fill="none" stroke="#a3001e" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="42" cy="49" r="2" fill="#ffccd5"/>
+            <circle cx="58" cy="49" r="2" fill="#ffccd5"/>
+          </svg>
+        </div>
+        
+        <p class="flork-text-so typewriter">You are the...</p>
+        <h2 class="flork-much font-stamp">BEST MADAMM ★</h2>
+        
+        <div class="flork-sticker-seal">
+          <span class="interactive-envelope" id="secret-envelope-btn" title="Click to open secret message! 💌">💌</span>
+          <span class="star-seal">⭐</span>
+        </div>
+        
+        <!-- Secret Message Pop-up Note (hidden by default) -->
+        <div class="secret-message-overlay hidden" id="secret-message-popup">
+          <div class="secret-notebook-paper">
+            <span class="close-secret-btn" id="close-secret-btn">×</span>
+            <p class="secret-note-greeting script">P.S. <span class="recipient-name-fill">Fahimm</span>...</p>
+            <p class="secret-note-text typewriter">
+              I might not always say it out loud, but you make my world a whole lot brighter just by being in it. You are my safe space, my favorite listener, and the best friend anyone could ask for. Happy Birthday! 🌸
+            </p>
+            <p class="secret-note-sign script">— <span class="sender-name-fill">Raazik</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scrapbook-footer">
+      <div class="disco-ball-wrap">
+        <div class="disco-ball">
+          <div class="disco-shine"></div>
+        </div>
+      </div>
+      <button class="btn-continue" data-next="screen-photos">Continue →</button>
+    </div>
+  </div>
+</section>
+
+<!-- SCREEN 4: PHOTO REVEAL -->
+<section class="screen" id="screen-photos">
+  <div class="scrapbook-page">
+    <div class="scrapbook-header">
+      <span class="stamp-text">snapshots</span>
+      <span class="retro-star">★</span>
+    </div>
+    
+    <p class="eyebrow typewriter">✦ interactive camera ✦</p>
+    <h2 class="section-title typewriter">I saved these for you</h2>
+    <p class="camera-hint typewriter" id="camera-hint" style="font-size: 11px; color: var(--muted-brown); margin-bottom: 8px;">(Tap the camera to capture some memories! 📷)</p>
+    <div class="camera-click" id="camera-click">📷</div>
+    <p class="photo-counter typewriter" id="photo-counter">0 / 2 photos</p>
+    
+    <div class="polaroid-row" id="polaroid-row">
+      <div class="polaroid hidden" data-caption="brighter ✨">
+        <div class="polaroid-img ph1"></div>
+        <p class="typewriter">brighter ✨</p>
+      </div>
+      <div class="polaroid hidden" data-caption="always ✨">
+        <div class="polaroid-img ph2"></div>
+        <p class="typewriter">always ✨</p>
+      </div>
+    </div>
+    
+    <button class="btn-continue hidden" id="photos-continue" data-next="screen-story">Continue →</button>
+  </div>
+</section>
+
+<!-- SCREEN 5: OUR STORY -->
+<section class="screen" id="screen-story">
+  <div class="scrapbook-page">
+    <div class="scrapbook-header">
+      <span class="stamp-text">memories</span>
+      <span class="retro-star">★</span>
+    </div>
+    
+    <p class="eyebrow typewriter">✦ timeline ✦</p>
+    <h2 class="section-title script">Beautiful story</h2>
+    
+    <div class="polaroid-row">
+      <div class="polaroid">
+        <div class="polaroid-img ph3"></div>
+        <p class="typewriter">soft, calm, you 🌿</p>
+      </div>
+      <div class="polaroid">
+        <div class="polaroid-img ph4"></div>
+        <p class="typewriter">always keep smiling 😊✨</p>
+      </div>
+    </div>
+    
+    <button class="btn-continue" data-next="screen-cake">Continue →</button>
+  </div>
+</section>
+
+<!-- SCREEN 6: CAKE -->
+<section class="screen" id="screen-cake">
+  <div class="scrapbook-page">
+    <div class="scrapbook-header">
+      <span class="stamp-text">make a wish</span>
+      <span class="retro-star">★</span>
+    </div>
+    
+    <p class="eyebrow typewriter">✦ slice time ✦</p>
+    <h2 class="section-title typewriter">Let's cut the cake!</h2>
+    <p class="hint typewriter" id="cake-hint">drag across the cake to cut a slice</p>
+    
+    <div class="cake-wrap" id="cake-wrap">
+      <div class="cake" id="cake">
+        <div class="cake-half left">
+          <div class="layer top"></div>
+          <div class="layer mid"></div>
+          <div class="layer bottom"></div>
+        </div>
+        <div class="cake-half right">
+          <div class="layer top"></div>
+          <div class="layer mid"></div>
+          <div class="layer bottom"></div>
+        </div>
+        <div class="candles">⭐🕯️🕯️🕯️⭐</div>
+      </div>
+    </div>
+    
+    <p class="cake-result typewriter hidden" id="cake-result">✨ Perfect slice! 🍰🍰🍰</p>
+    <button class="btn-continue hidden" id="cake-continue" data-next="screen-choose-gift">Continue →</button>
+  </div>
+</section>
+
+<!-- SCREEN 7: CHOOSE YOUR GIFTS (NEW PAGE HUB) -->
+<section class="screen" id="screen-choose-gift">
+  <div class="scrapbook-page gift-hub-page">
+    <div class="scrapbook-header">
+      <span class="stamp-text">special gifts</span>
+      <span class="retro-star">★</span>
+    </div>
+    
+    <h2 class="section-title font-stamp">Choose Your Gifts</h2>
+    <p class="sub typewriter">Click on each gift box to unpack your special surprises! 🎁</p>
+    
+    <div class="gift-options-row">
+      <!-- Gift 1: Envelope -->
+      <div class="gift-option-box tape-pink" id="gift-envelope-box">
+        <div class="tape-sticker gold"></div>
+        <div class="gift-visual envelope-visual">
+          <div class="custom-envelope">
+            <span class="daisy-seal">🌼</span>
+          </div>
+        </div>
+        <span class="gift-tag-label typewriter">A Letter</span>
+      </div>
+      
+      <!-- Gift 2: Bouquet -->
+      <div class="gift-option-box tape-green" id="gift-bouquet-box">
+        <div class="tape-sticker red"></div>
+        <div class="gift-visual bouquet-visual">
+          <div class="custom-bouquet">💐</div>
+        </div>
+        <span class="gift-tag-label typewriter">Flowers</span>
+      </div>
+      
+      <!-- Gift 3: Mystery Box -->
+      <div class="gift-option-box tape-yellow" id="gift-box-box">
+        <div class="tape-sticker gold"></div>
+        <div class="gift-visual box-visual">
+          <div class="custom-box shake-box">🎁</div>
+        </div>
+        <span class="gift-tag-label typewriter">Surprise</span>
+      </div>
+    </div>
+    
+    <!-- Navigation button to final screen, unlocked when they explore -->
+    <button class="btn-continue" id="gift-hub-continue-btn" data-next="screen-finale">Done Exploring →</button>
+  </div>
+</section>
+
+<!-- SCREEN 7-A: FLOWERS SCREEN -->
+<section class="screen" id="screen-gift-flowers">
+  <div class="scrapbook-page flowers-reveal-page">
+    <div class="scrapbook-header">
+      <span class="stamp-text">bouquet 🌹</span>
+      <span class="retro-star">★</span>
+    </div>
+    
+    <h2 class="flowers-title script">flowers for madamm ji</h2>
+    
+    <div class="flowers-layout">
+      <!-- Left side: Cute stick figure details -->
+      <div class="flowers-details">
+        
+        <div class="cute-creature-sketch">
+          <svg viewBox="0 0 100 100" class="creature-svg">
+            <!-- Head background & outline -->
+            <ellipse cx="50" cy="40" rx="34" ry="28" fill="#ebdbe8" stroke="#a3001e" stroke-width="3" />
+            
+            <!-- Blush lines (left) -->
+            <line x1="24" y1="46" x2="27" y2="52" stroke="#a3001e" stroke-width="2.5" stroke-linecap="round" />
+            <line x1="28" y1="46" x2="31" y2="52" stroke="#a3001e" stroke-width="2.5" stroke-linecap="round" />
+            <line x1="32" y1="46" x2="35" y2="52" stroke="#a3001e" stroke-width="2.5" stroke-linecap="round" />
+            
+            <!-- Blush lines (right) -->
+            <line x1="65" y1="46" x2="68" y2="52" stroke="#a3001e" stroke-width="2.5" stroke-linecap="round" />
+            <line x1="69" y1="46" x2="72" y2="52" stroke="#a3001e" stroke-width="2.5" stroke-linecap="round" />
+            <line x1="73" y1="46" x2="76" y2="52" stroke="#a3001e" stroke-width="2.5" stroke-linecap="round" />
+            
+            <!-- Eyes -->
+            <ellipse cx="36" cy="38" rx="16" ry="14" fill="#a3001e" />
+            <ellipse cx="64" cy="38" rx="16" ry="14" fill="#a3001e" />
+            
+            <!-- Left Eye Heart Shine -->
+            <path d="M36 41 C36 41, 31 38, 31 35 C31 32.5, 33.5 31.5, 36 34.5 C38.5 31.5, 41 32.5, 41 35 C41 38, 36 41, 36 41 Z" fill="#ffffff" transform="rotate(-10 36 36)" />
+            <ellipse cx="28" cy="32" rx="3" ry="2" fill="#ffffff" transform="rotate(-15 28 32)" />
+            
+            <!-- Right Eye Heart Shine -->
+            <path d="M64 41 C64 41, 59 38, 59 35 C59 32.5, 61.5 31.5, 64 34.5 C66.5 31.5, 69 32.5, 69 35 C69 38, 64 41, 64 41 Z" fill="#ffffff" transform="rotate(10 64 36)" />
+            <ellipse cx="72" cy="32" rx="3" ry="2" fill="#ffffff" transform="rotate(15 72 32)" />
+            
+            <!-- Shy Mouth -->
+            <path d="M44 50 Q50 53, 56 50" fill="none" stroke="#a3001e" stroke-width="3" stroke-linecap="round" />
+            
+            <!-- Shy Body -->
+            <path d="M38 64 L38 88 C38 92, 47 92, 47 88 L47 80 L53 80 L53 88 C53 92, 62 92, 62 88 L62 64" fill="#ebdbe8" stroke="#a3001e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M37 68 C39 74, 46 76, 49 76 C46 76, 42 78, 41 82" fill="none" stroke="#a3001e" stroke-width="3" stroke-linecap="round" />
+            <path d="M63 68 C61 74, 54 76, 51 76 C54 76, 58 78, 59 82" fill="none" stroke="#a3001e" stroke-width="3" stroke-linecap="round" />
+            <circle cx="50" cy="76" r="2.5" fill="#a3001e" />
+          </svg>
+          <div class="creature-bubble bg-purple typewriter">my favorite person</div>
+          <div class="creature-bubble bg-rose typewriter">i'm your #1 fan</div>
+        </div>
+      </div>
+      
+      <!-- Right side: Big bouquet representation -->
+      <div class="bouquet-big-card">
+        <img src="assets/photos/rose_bouquet_3d.png" class="bouquet-img" alt="Bouquet for Madam Ji">
+      </div>
+    </div>
+    
+    <button class="btn-continue back-to-gifts-btn">← Back to Gifts</button>
+  </div>
+</section>
+
+<!-- SCREEN 7-B: SURPRISE ACCEPT GAME SCREEN -->
+<section class="screen" id="screen-gift-accept">
+  <div class="scrapbook-page accept-game-page">
+    <div class="scrapbook-header">
+      <span class="stamp-text">accept gift 🎁</span>
+      <span class="retro-star">★</span>
+    </div>
+    
+    <h2 class="section-title font-stamp" id="accept-title-text">PLEASE ACCEPT THE GIFT</h2>
+    
+    <div class="game-container">
+      <div class="blushing-creature-wrap" id="accept-game-creature">
+        <svg viewBox="0 0 100 100" class="creature-svg">
+          <!-- Head background & outline -->
+          <ellipse cx="50" cy="40" rx="34" ry="28" fill="#ebdbe8" stroke="#2e2528" stroke-width="3" />
+          
+          <!-- Blush lines (left) -->
+          <line x1="24" y1="46" x2="27" y2="52" stroke="#d63031" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="28" y1="46" x2="31" y2="52" stroke="#d63031" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="32" y1="46" x2="35" y2="52" stroke="#d63031" stroke-width="2.5" stroke-linecap="round" />
+          
+          <!-- Blush lines (right) -->
+          <line x1="65" y1="46" x2="68" y2="52" stroke="#d63031" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="69" y1="46" x2="72" y2="52" stroke="#d63031" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="73" y1="46" x2="76" y2="52" stroke="#d63031" stroke-width="2.5" stroke-linecap="round" />
+          
+          <!-- Eyes -->
+          <ellipse cx="36" cy="38" rx="16" ry="14" fill="#2e2528" />
+          <ellipse cx="64" cy="38" rx="16" ry="14" fill="#2e2528" />
+          
+          <!-- Left Eye Heart Shine -->
+          <path d="M36 41 C36 41, 31 38, 31 35 C31 32.5, 33.5 31.5, 36 34.5 C38.5 31.5, 41 32.5, 41 35 C41 38, 36 41, 36 41 Z" fill="#ffffff" transform="rotate(-10 36 36)" />
+          <ellipse cx="28" cy="32" rx="3" ry="2" fill="#ffffff" transform="rotate(-15 28 32)" />
+          
+          <!-- Right Eye Heart Shine -->
+          <path d="M64 41 C64 41, 59 38, 59 35 C59 32.5, 61.5 31.5, 64 34.5 C66.5 31.5, 69 32.5, 69 35 C69 38, 64 41, 64 41 Z" fill="#ffffff" transform="rotate(10 64 36)" />
+          <ellipse cx="72" cy="32" rx="3" ry="2" fill="#ffffff" transform="rotate(15 72 32)" />
+          
+          <!-- Shy Mouth -->
+          <path d="M44 50 Q50 53, 56 50" fill="none" stroke="#2e2528" stroke-width="3" stroke-linecap="round" />
+          
+          <!-- Shy Body -->
+          <path d="M38 64 L38 88 C38 92, 47 92, 47 88 L47 80 L53 80 L53 88 C53 92, 62 92, 62 88 L62 64" fill="#ebdbe8" stroke="#2e2528" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M37 68 C39 74, 46 76, 49 76 C46 76, 42 78, 41 82" fill="none" stroke="#2e2528" stroke-width="3" stroke-linecap="round" />
+          <path d="M63 68 C61 74, 54 76, 51 76 C54 76, 58 78, 59 82" fill="none" stroke="#2e2528" stroke-width="3" stroke-linecap="round" />
+          <circle cx="50" cy="76" r="2.5" fill="#2e2528" />
+        </svg>
+      </div>
+      
+      <!-- Polaroid Reveal Card (hidden by default) -->
+      <div class="accept-reveal-polaroid hidden" id="accept-reveal-polaroid">
+        <div class="polaroid-tape"></div>
+        <div class="polaroid-img-wrap">
+          <img src="assets/photos/lily_bouquet_3d.png" alt="Special surprise for Madam Ji">
+        </div>
+        <p class="typewriter">for madamm ji 🌸</p>
+      </div>
+      
+      <!-- YES/NO dodge actions -->
+      <div class="accept-buttons-wrap">
+        <button class="game-btn yes-btn" id="gift-yes-btn">YES</button>
+        <button class="game-btn no-btn" id="gift-no-btn">NO</button>
+      </div>
+    </div>
+    
+    <button class="btn-continue back-to-gifts-btn hidden" id="gift-game-back-btn">← Back to Gifts</button>
+  </div>
+</section>
+
+<!-- SCREEN 7-C: LETTER (STATIONERY LETTER SURPRISE) -->
+<section class="screen" id="screen-letter">
+  <div class="scrapbook-page letter-stationery-page">
+    <div class="scrapbook-header">
+      <span class="stamp-text">from my heart 💌</span>
+      <span class="retro-star">★</span>
+    </div>
+    
+    <div class="stationery-letter">
+      <div class="letter-seal">🌹</div>
+      <p class="letter-greeting script">Assalamualaikum, <span class="recipient-name-fill">Fahimm</span>,</p>
+      <p class="letter-body typewriter">
+        It's always been fun laughing together, teasing each other, sharing everything, and even bitching about people together. 😂🤍 Those little moments have become some of my favorite memories.<br><br>
+        I don't say this often, but I'm really grateful to have you in my life. Whenever you're feeling heavy or if any problem comes up, please let me know. I may not be a good person, but I'll always try my best to help and be there for you.<br><br>
+        On your special day, I just want to wish you all the happiness, peace, and success that you deserve. Keep smiling, keep being yourself, and never forget how much you're appreciated.<br><br>
+        Happy Birthday, <span class="recipient-name-fill">Fahimm</span>! 🎂🌸✨<br><br>
+        May Allah bless you with happiness, good health, endless laughter, and countless beautiful memories this year and always. Ameen. 🤍
+      </p>
+      <p class="letter-sign script">Forever your bestie,<br><span class="sender-name-fill">Raazik</span> 🌹</p>
+    </div>
+    
+    <button class="btn-continue back-to-gifts-btn">← Back to Gifts</button>
+  </div>
+</section>
+
+<!-- SCREEN 8: FINALE -->
+<section class="screen" id="screen-finale">
+  <div class="scrapbook-page">
+    <div class="scrapbook-header">
+      <span class="stamp-text">finale 🎉</span>
+      <span class="retro-star">★</span>
+    </div>
+    
+    <div class="confetti-anchor"></div>
+    <h1 class="big-name typewriter"><span>Happy Birthday</span><br><span class="name-gradient"><span class="recipient-name-fill">Fahimm</span> 🎉</span></h1>
+    <p class="sub typewriter">Thank you for being the absolute best. Here's to making infinite more memories! 🥂⭐🌸</p>
+    <button class="btn-continue" id="replay-btn">Replay ↺</button>
+  </div>
+</section>
+
+<audio id="bg-music" loop>
+  <source src="assets/audio/JVKE - golden hour (instrumental).mp3" type="audio/mpeg">
+</audio>
+<button id="music-toggle" class="music-btn hidden">🔊</button>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
