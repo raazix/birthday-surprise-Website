@@ -1,12 +1,9 @@
-# Environment Variables (Keep secrets local)
+# Environment & Secret Files
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
 *.env
 
-# Personal Photos & Private Media
+# Media & Uploads
 assets/photos/*
 !assets/photos/rose*
 !assets/photos/lily*
@@ -15,35 +12,19 @@ assets/photos/*
 
 # Dependencies & Package Managers
 node_modules/
-jspm_packages/
 .pnpm-store/
 .yarn/
-yarn-debug.log*
-yarn-error.log*
+*.log
 
-# Production & Build outputs
+# Build & Cache Outputs
 dist/
 build/
 out/
-.next/
 .cache/
 
 # Operating System & Editor Files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 Desktop.ini
-
-# IDE & Text Editor config
 .vscode/
 .idea/
-
-# Temporary files & Logs
-logs/
-*.log
-*.tmp
-*.temp
